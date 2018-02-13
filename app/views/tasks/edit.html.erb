@@ -1,0 +1,13 @@
+<h2> Modify an existing task </h2>
+
+<%= form_for @task do |f|  %>
+  <%= f.label :title, "Enter a new name" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :details, "Enter new details" %>
+  <%= f.text_field :details %>
+  <%= f.check_box :completed  %>
+
+  <%= f.submit %>
+
+<% end %>

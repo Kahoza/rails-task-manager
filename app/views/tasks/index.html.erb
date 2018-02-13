@@ -1,0 +1,20 @@
+<!-- view of the index
+-->
+<h1> Here you can find all your tasks</h1>
+
+<% @tasks.each do |task| %>
+
+<h2>
+<% if :completed == true %>
+  <%= "[X]" %>
+  <% else %>
+  <%= "[ ]" %>
+<% end %>
+  <%= link_to task.title, task_path(task) %></h2>
+<% end  %>
+
+
+<p> <%= link_to "Add a new task", new_path %></p>
+
+
+
